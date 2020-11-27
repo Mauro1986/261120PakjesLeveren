@@ -18,18 +18,5 @@ namespace _261120PakjesLeveren.Models
             Console.WriteLine("Package is deliverd by DHL");
             SmsConfirmationToBPost();
         }
-
-        public override void SmsConfirmationToBPost()                            
-        {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"By this SMS we confirm the{TransactionId} is deliverd");
-            Console.WriteLine($"Deliverd at: {DeliverAddress}");
-            Console.ResetColor();
-        }
-
-        public override void PrintTotalNumberOfPackagesDeliverd()                
-        {
-            Console.WriteLine($"Total Packages {count}");
-        }
     }
 }

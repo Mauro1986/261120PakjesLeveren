@@ -8,7 +8,6 @@ namespace _261120PakjesLeveren.Models
 {
    public class Bpost
     {
-        public static int count;
         public string TransactionId { get; set; }
         public string DeliverAddress { get; set; }
 
@@ -19,7 +18,7 @@ namespace _261120PakjesLeveren.Models
 
         public Bpost()
         {
-            count++;
+            Transactions.count++;
         }
 
         public virtual void PackagaOnTheWay()
@@ -39,11 +38,6 @@ namespace _261120PakjesLeveren.Models
             Console.WriteLine($"By this SMS we confirm the{TransactionId} is deliverd");
             Console.WriteLine($"Deliverd at: {DeliverAddress}");
             Console.ResetColor();
-        }
-
-        public virtual void PrintTotalNumberOfPackagesDeliverd()
-        {
-            Console.WriteLine($"Total Packages {count}");
         }
     }
 }

@@ -23,6 +23,12 @@ namespace _261120PakjesLeveren
             Transactions.BpostUI();
 
             Transactions.DhlUI();
+
+            Transactions.NLpostUI();
+
+            Transactions.ExpressUI();
+
+            Console.WriteLine("Total Packages " + Transactions.count);
         }
     }
 }
